@@ -82,12 +82,44 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: [promoCard("assets/images/one.jpg"),
-                      promoCard("assets/images/two.jpg"),
-                      promoCard("assets/images/three.jpg"),
-                      promoCard("assets/images/four.jpg")],
+                      children: [
+                        promoCard("assets/images/one.jpg"),
+                        promoCard("assets/images/two.jpg"),
+                        promoCard("assets/images/three.jpg"),
+                        promoCard("assets/images/four.jpg")
+                      ],
                     )),
-                    
+                SizedBox(height: 20),
+                Container(
+                  height: 140,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/images/four.jpg")),
+                  ),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                            begin: Alignment.bottomRight,
+                            stops: [
+                              0.2,
+                              0.9
+                            ],
+                            colors: [
+                              Colors.black.withOpacity(.8),
+                              Colors.black.withOpacity(0)
+                            ])),
+                            child: Align(
+                              alignment: Alignment.bottomLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.all(14.0),
+                                child: Text("Have a nice day!", style: TextStyle(color:Colors.white,fontSize: 20)),
+                              ),
+                            ),
+                  ),
+                ),
               ],
             ),
           )
@@ -103,14 +135,15 @@ class _HomePageState extends State<HomePage> {
           margin: EdgeInsets.only(right: 15.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(
-                fit: BoxFit.cover, image: AssetImage(image)),
+            image: DecorationImage(fit: BoxFit.cover, image: AssetImage(image)),
           ),
           child: Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                gradient: LinearGradient(begin: Alignment.bottomRight,
-                stops: [0.1,0.8], colors: [
+                gradient: LinearGradient(begin: Alignment.bottomRight, stops: [
+                  0.1,
+                  0.8
+                ], colors: [
                   Colors.black.withOpacity(.8),
                   Colors.black.withOpacity(0)
                 ])),
