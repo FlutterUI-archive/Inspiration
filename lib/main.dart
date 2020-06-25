@@ -30,10 +30,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           Container(
             width: double.infinity,
-            decoration: BoxDecoration(color: Colors.white,
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(30),
-            )),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(30),
+                )),
             padding: EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,18 +46,48 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Text("Inspiration",
                     style: TextStyle(color: Colors.black, fontSize: 40)),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                         color: Color.fromRGBO(227, 232, 232, 1),
                         borderRadius: BorderRadius.circular(15)),
-                    child: TextField(decoration: InputDecoration(
-                      border: InputBorder.none,
-                      prefixIcon: Icon(Icons.search,color: Colors.black87,),
-                      hintText: "What are you looking for?",
-                      hintStyle: TextStyle(color: Colors.grey,fontSize:16)
-                    )))
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            prefixIcon: Icon(
+                              Icons.search,
+                              color: Colors.black87,
+                            ),
+                            hintText: "What are you looking for?",
+                            hintStyle:
+                                TextStyle(color: Colors.grey, fontSize: 16)))),
+                SizedBox(height: 10),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Today's Picks", style:TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold
+                )),
+                SizedBox(height:15),
+                Container(
+                  height: 200,
+                  child:ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      
+                    ],
+                  )
+                )
               ],
             ),
           )
