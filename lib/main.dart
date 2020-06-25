@@ -74,25 +74,33 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Today's Picks", style:TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold
-                )),
-                SizedBox(height:15),
+                Text("Today's Picks",
+                    style:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                SizedBox(height: 15),
                 Container(
-                  height: 200,
-                  child:ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      
-                    ],
-                  )
-                )
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [promoCard("")],
+                    ))
               ],
             ),
           )
         ],
       )),
     );
+  }
+
+  Widget promoCard(image) {
+    return AspectRatio(
+        aspectRatio: 2 / 3,
+        child: Container(
+          decoration: BoxDecoration(
+              color: Colors.orange,
+              borderRadius: BorderRadius.circular(20),
+              image:
+                  DecorationImage(image: AssetImage("assets/images/one.jpg"))),
+        ));
   }
 }
