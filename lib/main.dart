@@ -31,7 +31,9 @@ class _HomePageState extends State<HomePage> {
           Container(
             width: double.infinity,
             decoration: BoxDecoration(color: Colors.white,
-            ),
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(30),
+            )),
             padding: EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
